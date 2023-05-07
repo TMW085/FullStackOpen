@@ -13,7 +13,7 @@ const Button = (props) =>
 const StatisticsLine = (props) =>
 {
   return (
-    <p>{props.text} {props.value} {props.extra}</p>
+    <p>{props.text} {props.value} </p>
   )
 }
 
@@ -37,7 +37,7 @@ const Statistics = (props) =>
         <StatisticsLine text='bad' value={props.bad} />
         <StatisticsLine text='all' value={totalFeedback}/>
         <StatisticsLine text='average' value={averageFeedback}/>
-        <StatisticsLine text='positive' value={positiveFeedback} extra='%'/>
+        <StatisticsLine text='positive' value={`${positiveFeedback}%`} />
       </div>
     )
   }
