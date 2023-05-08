@@ -1,4 +1,4 @@
-import Curriculum from "./Curriculum"
+import Course from "./Course"
 
 const App = () => {
     const courses = [
@@ -45,8 +45,14 @@ const App = () => {
           ]
         }
       ]
-  
-   return <Curriculum courses={courses} />
+
+      
+    return (
+        <>
+            <h1>Web development curriculum</h1>
+            {courses.map(course => <Course key={course.id} course={course}/>)}
+        </>
+    )
   }
   
   export default App
